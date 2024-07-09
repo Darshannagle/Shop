@@ -1,0 +1,119 @@
+0= prerequisites
+	-OOPS concepts
+	-Native Android
+	-GIT
+	-Install Flutter
+1= Statrt with Besics
+	 lists,map,lambda,await async ,future stream,
+2 = UI Development 
+	dribbble,clone apps
+3 = Api calls
+	http ,dio retrofit, json placeholders
+4 = Databse Intigration
+ - Firebase
+ -Superbasse
+-hive
+-Moor
+5 = State Management
+	provider 
+	Bloc 
+	Riverpod
+6. project Structure
+	- keep simple
+	- scalabe
+	least inter -dependenet
+between functionsaluty
+ Code reusabllity
+Technical Skills:
+Knowledge of Dart, Java, Kotlin, SQLite, Webpack, HTML, JavaScript, CSS3
+Designing reusable code and modules
+Third-party libraries and RESTful APIs
+Code versioning tools like Git, Jenkins, etc.
+Prior knowledge of native programming languages
+Agile and waterfall development methodologies
+Android and iOS development
+State management and app architecture
+Known to Firebase, PWA, Azure DevOps
+Automated building and testing
+IDEs like Android Studio, VS Code, etc.
+Familiarity with Material Design guidelines
+Networking and handling push notifications
+Test cases for better performance and debugging of code
+Microservices architecture and containers
+Offline storage, performance tuning, and threading
+Soft Skills:
+Problem-solving and team spirit
+Communication and self-initiation
+English and documentation capabilities
+Social and planning skills
+Responsibility and knowledge
+Adherence to legal needs
+A practical approach to issue resolution
+Insightful and innovative
+Understanding of business requirements
+Flutter Developer Roles and Responsibilities
+Flutter has been a popular and in-demand technology and hence the Flutter developer roles and responsibilities are quite heavy. These roles and responsibilities form a part of the Flutter developer – job description. Here are they:
+
+Design, develop, test, and implement applications
+Cooperation with designers, testers, managers, product owners, and other stakeholders
+Take complete ownership of developing user-friendly, good-quality software delivery
+Identify and solve errors, and discrepancies in the system
+Support and maintenance of all applications
+Application compatibility with multiple platforms
+Write clean, crisp, smart code
+Get involved in the entire software development life cycle
+Stay abreast with the latest trends and technologies
+Optimize development processes through different approaches
+Create and ship apps to Android/iOS devices with a single codebase
+Adhere to organizational best practices and regulations
+Write UI components for reusability of code
+Reviewing the code of team members in the CI/CD cycle
+Create designs and wireframes translating into responsive UI code
+Ensure compliance with security guidelines, organizational standards
+Assessing time profiling and memory leaks
+Flutter Interview Questions
+Aspiring Flutter developers must be well prepared for their interviews and the following list of Flutter interview questions are certain basic ones that can help big time:
+
+What is Flutter and name some benefits of using it
+Name some limitations of Flutter
+Describe your experience and challenges while using Flutter
+Mention the different build modes of Flutter
+What is a Flutter widget?
+Explain the Stateful widget and Stateless widget and mention their difference
+What is a Cookbook in Flutter?
+Describe the significance of the Spread operator
+Describe the Flutter architecture
+What is asynchronous programming?
+What is a package and a plugin in Flutter?
+What are streams in Flutter?
+How important is Dart while developing Flutter apps
+Explain what a Flutter SDK means
+Explain what widget tests are, unit tests, and integration tests
+Why would you choose Flutter over the others?
+Why are three folders necessary in Flutter projects?
+What are the different types of streams?
+What are the useful editors for Flutter apps?
+What is tree shaking in Flutter?
+What is the Hot Reload and Hot Restart function in Flutter and what is the difference between them?
+What is Dart DevTools in Flutter?
+How can you ensure consistent formatting in Flutter code?
+What is the basic difference between Flutter and WebView?
+What is ScopedModel?
+Details for Flutter Developer Salary
+Based on geographical spread, the Flutter developer salary structure may vary. Here is a glance through some of the locations where Flutter is in demand and its related salary:
+
+The average flutter developer salary in the USA is $131,625 per year or $63.28 per hour. Entry-level positions start at $110,000 per year while most experienced workers make up to $162,000 per year.
+The average flutter mobile developer salary in the United Kingdom is £50,000 per year or £25.64 per hour. Entry-level positions start at £40,000 per year while most experienced workers make up to £70,000 per year.
+The national average salary for a Flutter Developer is $70,242 in Canada.
+Flutter Developer salary in India ranges between ₹ 1.2 Lakhs to ₹ 10.0 Lakhs with an average annual salary of ₹ 3.6 Lakhs. Salary estimates are based on 1.5k salaries received from Flutter Developers.
+The national average salary for a Flutter Developer is $145,000 in Australia.
+Flutter Developer Salary – For Freshers and Experienced: A beginner-level Flutter developer may earn around $38,000 per annum, a mid-level Flutter developer with a few years of experience around $67,000, and a Flutter developer with several years of experience and expertise around $96,000 per annum.
+Flutter Developer: Wrapping It Up
+While Flutter app development is on a high, selecting the right kind of Flutter developers and hire Flutter developers for projects depends upon certain parameters such as geographical proximity, professional matters, accessibility of developers, social compatibility, service costs, project deadlines, budgets, the scope of work, payment models, scalability of teams, etc.
+
+Flutter developers, that you choose, must be well-versed with all the nitty-gritties of Flutter development, having experience in varied industry segments.
+
+They must understand business requirements with ease, with the ability to convert them into an enriched Flutter application. There must be strict adherence to project execution methodologies and organizational standards.
+
+The right way is to partner with an experienced software consultancy firm and hire Flutter developers, based on actual requirements.
+
