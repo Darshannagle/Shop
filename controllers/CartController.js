@@ -43,12 +43,12 @@ CartController.updateCart =  async (req, res) => {
                 await CartItem.destroy({ where: { cart_id: id } });
 
 
-                res.status(400).send("cant update CartItem ")
+                res.status(400).json({message:"cant update CartItem "})
 
             }
         }
         else {
-            res.status(400).send("Product not exist ")
+            res.status(400).json({message:"Product not exist "})
 
         }
     } catch (error) {
@@ -64,13 +64,13 @@ CartController.addCart = async (req, res) => {
         console.log(req.body);
         var product = await Product.findOne({ where: { product_id: data.product_id } })
         var exCart = await CartItem.findOne({ where: { product_id: data.product_id, user_id: req.user.user_id } })
-        if (product && data.quantity > 0) {
+        if (product && data.quantity > 0 && data.quantity<=product.stock) {
             if (exCart) {
                 console.log(exCart);
 
                 exCart.quantity += data.quantity;
-                exCart.totalPrice += (product.price * data.quantity);
-                exCart = await exCart.save()
+                // exCart.totalPrice += (product.price * data.quantity);
+                // exCart = await exCart.save()
                 res.send(exCart).status(201);
 
 
@@ -78,12 +78,14 @@ CartController.addCart = async (req, res) => {
                 data.totalPrice = data.quantity * product.price;
                 console.log('final Product :', data);
                 var cart = await CartItem.create(data);
+                // product.stock-=data.quantity;
+                // await product.save()
                 res.status(201).send(cart)
 
             }
         }
         else {
-            res.status(400).send("can't add to Cart");
+            res.status(400).json({message:"can't add to Cart"});
 
         }
 
@@ -101,7 +103,7 @@ CartController.deleteCart =  async (req, res) => {
     } catch (error) {
         console.log(error);
 
-        res.status(500).send(error)
+        res.status(500).send(error.message)
     }
 }
 

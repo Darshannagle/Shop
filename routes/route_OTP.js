@@ -8,14 +8,14 @@ route_OTP.post("/",async (req,res,next)=>{
     const { otp } = req.body;
 
     if (!otp) {
-        return res.status(400).send("Enter a valid OTP");
+        return res.status(400).json({message:"Enter a valid OTP"})
     }
     
     try {
         const savedOTP = await OTP.findOne({ where: { otp: otp } });
     console.log(savedOTP);
         if (!savedOTP) {
-            return res.status(400).send("Either OTP expired or does not exist");
+            return res.status(400).json({message:"Either OTP expired or does not exist"});
         }
     console.log(savedOTP.getDataValue('generationTime'));
         const currentTimeInSeconds = Math.floor(Date.now() / 1000);
@@ -23,14 +23,14 @@ route_OTP.post("/",async (req,res,next)=>{
         console.log(currentTimeInSeconds,":",otpExpirationTimeInSeconds  );
     
         if (currentTimeInSeconds > otpExpirationTimeInSeconds) {
-            return res.status(400).send("OTP has expired");
+            return res.status(400).json({message:"OTP has expired"});
         }
             await OTP.destroy({where:{otp:otp}})
-        return res.status(200).send("User verified successfully");
+        return res.status(200).json({message:"User verified successfully"});
     
     } catch (error) {
         console.error("Error occurred during OTP verification:", error);
-        return res.status(500).send("Internal Server Error");
+        return res.status(500).json({message:"Internal Server Error"});
     }
     
 })

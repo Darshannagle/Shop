@@ -10,13 +10,13 @@ const KEY = "PRIVATEKEY";
 class UserController { }
 UserController.SignUp = async (req, res) => {
   try {
-    console.log("file: " + req.file);
     if (!req.file) {
-      res.status(413).send('Please upload File ! ' + req.file)
+      res.status(413).json({message:'Please upload File ! ' + req.file})
       return;
     }
-    const email = req.body.email;
-    const password = req.body.password;
+    const {email,password} = req.body
+
+    
     // const { email, password } = JSON.parse( req.body.data);
     const userfile = req.file.originalname;
 
@@ -44,8 +44,9 @@ UserController.Login = async (req, res, next) => {
       return res.status(400).json({ error: 'Invalid  password' });
     }
     let token;
-    token = await jwt.sign({ email: email, user_id: user.user_id }, KEY, { expiresIn: '1h' });
-    res.status(200).json(token);
+    token = await jwt.sign({ email: email, user_id: user.user_id }, KEY);
+    // , { expiresIn: '1h' }
+    res.status(200).json({token:token});
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
