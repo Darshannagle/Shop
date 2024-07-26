@@ -15,16 +15,16 @@ const CartItem = sequlize.define('CartItem', {
         references: {
             model: Product,
             key: 'product_id'
-        },
-        user_id: {
+        }
+    }
+    ,user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: User,
                 key: 'user_id'
             }
-        }
-    },
+        },
     quantity: {
         type: DataTypes.INTEGER,
         allowNull: false

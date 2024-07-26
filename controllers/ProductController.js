@@ -21,9 +21,22 @@ ProductController.addProduct = async (req, res) => {
 res.status(500).send(error)        
     }
 }
+ProductController.addAllProducts = async (req, res) => {
+    try {
+        const products = await Product.bulkCreate(req.body)
+        res.status(201).send(products);
+        
+    } catch (error) {
+        console.log(error);
+res.status(500).json({error:error.message});        
+    }
+}
+
 ProductController.updateProduct = async (req,res,next)=>{
     const product = await Product.update(req.body,{where:{product_id:req.params.id}})
-    res.status(200).send(product)
+     (product[0]==1) ?
+        res.status(200).json({message:"Product updated successfully"})
+:        res.status(400).json({message:"Can\'t update product"})
 }
 
 ProductController.deleteProduct= async (req,res,next)=>{
@@ -31,7 +44,7 @@ ProductController.deleteProduct= async (req,res,next)=>{
     try {
     const id = Number(req.params.id); 
     const r = await Product.destroy({where:{product_id:id}});
-        (r==1)? res.send(200) :res.send(400)
+        (r==1)? res.status(200).json({message:"Product deleted successfully"}) :res.send(400).json({message:"Can\'t delete product "})
 
 } catch (error) { res.send(error.message)}
 }

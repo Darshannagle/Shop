@@ -1,6 +1,5 @@
 const {DataTypes, Deferrable, DATE} = require('sequelize')
 const sequelize = require('../config/connection');
-const CartItem = require('./CartItem');
 const bcrypt = require('bcrypt');
 const User = sequelize.define(
     'user',{
