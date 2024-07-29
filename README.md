@@ -71,6 +71,13 @@
      sequlize.sync({ force: true }).then(() => console.log("done")).catch((e) => { console.error(e); })
 
     ```
+3. Create .env file and add configurations:
+   ```bash
+   ADMIN_SECRET= //Your Secret key for admin token
+    DB=   //Database name
+    DB_USER= // Username for Database
+    DB_PASSWORD= //Password for Database
+   ```
 
 ## Usage
 
