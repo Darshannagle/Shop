@@ -53,31 +53,18 @@
     CREATE DATABASE test;
     ```
 
-2. Configure the database connection in `config/connection.js`:
-    ```json
-    {
-      "development": {
-        "username": "root",
-        "password": null,
-        "database": "shop",
-        "host": "127.0.0.1",
-        "dialect": "mysql"
-      }
-    }
-    ```
-
-3. Enable Sequelize Sync by uncommenting line no 16 in index.js:
-    ```bash
-     sequlize.sync({ force: true }).then(() => console.log("done")).catch((e) => { console.error(e); })
-
-    ```
-3. Add configurations in .env file:
+2. Add configurations in .env file:
    ```bash
    ADMIN_SECRET= //Your Secret key for admin token
     DB=   //Database name
     DB_USER= // Username for Database
     DB_PASSWORD= //Password for Database
    ```
+3. Enable Sequelize Sync by uncommenting line no 16 in index.js:
+    ```bash
+     sequlize.sync({ force: true }).then(() => console.log("done")).catch((e) => { console.error(e); })
+
+    ```
 
 ## Usage
 
